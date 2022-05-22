@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style-prefix.css">
+    
+        <!-- 
+          - google font link
+        -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+        <!-- swiper css link  -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+      
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+        <title>Shop</title>
+    </head>
+<body>
+    <%- include('./partials/modal') %> 
+  
+    <%- include('./partials/header',{
+        gh,ds,gho
+    }); %>
+    <main>
+        <div class="product-container">
+            <div class="container">
+                <div class="product-box">
+                  <div class="product-featured">
+
+                      <h2 class="title">بهترین ها برای شما</h2>
+          
+                      <div class="showcase-wrapper has-scrollbar">
+          
+                        <div class="showcase-container">
+          
+                          <div class="showcase">
+                            
+                            <div class="showcase-banner">
+                              <img src="<%=post.image%>" alt="shampoo, conditioner & facewash packs" class="showcase-img">
+                            </div>
+          
+                            <div class="showcase-content">
+
+          
+                              <p class="showcase-desc">
+                               <%=post.post%>
+                              </p>
+                              <a href="https://instagram.com/pira_gallery" target="_blank" rel="noopener noreferrer">
+                              <button class="add-cart-btn">خرید</button>
+                            </a>
+                            
+                            
+                            </div>
+          
+                          </div>
+          
+                        </div>
+          
+                     
+                      </div>
+          
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>  
+    <%- include('./partials/footer'); %>  
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script src="/js/script.js"></script>
+</body>
+</html>

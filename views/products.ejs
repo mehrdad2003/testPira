@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fa">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style-prefix.css">
+    
+        <!-- 
+          - google font link
+        -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+        <!-- swiper css link  -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+      
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+        <title>Shop</title>
+    </head>
+<body>
+    <%- include('./partials/modal') %> 
+  
+    <%- include('./partials/header',{
+        gh,ds,gho
+    }); %>  
+    <main>
+        <div class="product-container">
+            <div class="container">
+                <div class="product-box">
+                    <div class="product-main">
+
+                        <h2 class="title"><%=name%></h2>
+            
+                        <div class="product-grid">
+                           
+            <% articles1[page].forEach((item)=>{%>
+                <div class="showcase">
+            
+                    <div class="showcase-banner">
+                         <a href="/detailPost/<%=item.id%>">
+                      <img src="<%=item.image%>" alt="Mens Winter Leathers Jackets" width="300" class="product-img default">
+                     
+                      <img src="<%=item.image%>" alt="Mens Winter Leathers Jackets" width="300" class="product-img hover">
+                    </a>
+                      <!-- <p class="showcase-badge">15%</p> -->
+    
+                      <div class="showcase-actions">
+                        <a href="/detailPost/<%=item.id%>">
+                        <button class="btn-action">
+                          <ion-icon name="eye-outline"></ion-icon>
+                        </button>
+                        </a>
+                       
+                        <a href="https://instagram.com/pira_gallery" target="_blank" rel="noopener noreferrer">
+                        <button class="btn-action">
+                          <ion-icon name="bag-add-outline"></ion-icon>
+                        </button>
+                    </a>
+                      </div>
+    
+                    </div>
+    
+                    <div class="showcase-content">
+    
+                      <a href="/detailPost/<%=item.id%>" class="showcase-category"><%=name%></a>
+    
+                      <a href="/detailPost/<%=item.id%>">
+                        <h3 class="showcase-title"><%=item.post.substring(12,55)%>...</h3>
+                      </a>
+    
+    
+                    </div>
+    
+                  </div>    
+            <%})%>
+            
+                        </div>
+                        <div className='btn-container'>
+                   
+                
+
+                            <a class='page-btn' href="/mainSearch?search=<%=name%>&page=<%= page<=0?0:page-1 %>">قبلی</a>
+                            <a class='page-btn' href=""><%=page+1%>از<%=items.length%></a>
+                            <a class='page-btn' href="/mainSearch?search=<%=name%>&page=<%= page+1 >=items.length?0:page+1 %>">بعدی</a>
+                              </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </main> 
+    <%- include('./partials/footer'); %>  
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script src="/js/script.js"></script>
+</body>
+</html>

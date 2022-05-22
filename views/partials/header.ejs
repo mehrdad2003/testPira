@@ -1,0 +1,255 @@
+<header>
+
+    <div class="header-top">
+
+      <div class="container">
+
+        <ul class="header-social-container">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a class="social-link" href="https://instagram.com/pira_gallery" target="_blank" rel="noopener noreferrer">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="header-alert-news">
+          <p>
+            <b>به گالری پیرا خوش آمدید</b>
+           
+          </p>
+        </div>
+    
+      </div>
+
+    </div>
+
+    <div class="header-main">
+
+      <div class="container">
+
+        <a href="/" class="header-logo">
+          <img src="/images/logo/logo.svg" alt="Pira's logo" width="120" height="36">
+        </a>
+
+        <div class="header-search-container">
+            <form action="/mainSearch" method="GET">
+          <input type="search" required name="search" class="search-field" placeholder="نام کالا ،قیمت و...">
+
+          <button type="submit" class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </form>
+        </div>
+
+       
+      </div>
+
+    </div>
+
+    <nav class="desktop-navigation-menu">
+
+      <div class="container">
+
+        <ul class="desktop-menu-category-list">
+
+          <li class="menu-category">
+            <a href="/" class="menu-title">خانه</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">دسته بندی کالاها</a>
+
+            <div class="dropdown-panel">
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="/mainSearch/?search=گردنبند">گردن بند</a>
+                </li>
+
+               
+              
+
+                <li class="panel-list-item">
+                    <a href="/mainSearch/?search=گردنبند">گردن بند
+                    <img src="<%=gh[0].image%>" alt="headphone collection" width="250"
+                      height="119">
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="/mainSearch/?search=دستبند">دستبند</a>
+                </li>
+
+                <li class="panel-list-item">
+                    <a href="/mainSearch/?search=دستبند">دستبند
+                    <img src="<%=ds[0].image%>" alt="men's fashion" width="250" height="119">
+                  </a>
+                </li>
+
+              </ul>
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="/mainSearch/?search=گوشواره">گوشواره</a>
+                </li>
+
+
+                <li class="panel-list-item">
+                    <a href="/mainSearch/?search=گوشواره">گوشواره
+                    <img src="<%=gho[0].image%>" alt="women's fashion" width="250" height="119">
+                  </a>
+                </li>
+
+              </ul>
+
+            
+
+            </div>
+          </li>
+
+          <li class="menu-category">
+            <a href="/mainSearch/?search=گردنبند">گردن بند</a>
+
+           
+          </li>
+
+          <li class="menu-category">
+            <a href="/mainSearch/?search=دستبند">دستبند</a>
+
+           
+          </li>
+
+          <li class="menu-category">
+            <a href="/mainSearch/?search=گوشواره">گوشواره</a>
+
+           
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+    <div class="mobile-bottom-navigation">
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="home-outline"></ion-icon>
+      </button>
+
+    
+
+    
+    </div>
+
+    <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
+
+      <div class="menu-top">
+        <h2 class="menu-title">لیست</h2>
+
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+
+        <li class="menu-category">
+          <a href="/" class="menu-title">خانه</a>
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <a href="/mainSearch/?search=گردنبند">گردن بند</a>
+
+           
+          </button>
+
+        
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <a href="/mainSearch/?search=دستبند">دستبند</a>
+                    </button>
+
+        </li>
+        <li class="menu-category">
+          <button class="accordion-menu" data-accordion-btn>
+            <a href="/mainSearch/?search=گوشواره">گوشواره</a>
+
+          </button>
+
+        </li>
+
+      </ul>
+
+      <div class="menu-bottom">
+
+      
+        <ul class="menu-social-container">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://instagram.com/pira_gallery" class="social-link" target="_blank" rel="noopener noreferrer">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </header>
+
