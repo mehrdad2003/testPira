@@ -33,8 +33,8 @@ const mainCtrl={
             const ds=allPosts.filter(item=>item.post.includes('دستبند')).slice(0,4)
             const gho=allPosts.filter(item=>item.post.includes('گوشواره')).slice(0,4)
             const news2=allPosts.filter(item=>item.post.includes(req.query.search))
-           
-        let itemsPerPage =news2.length===1?1:20
+         
+        let itemsPerPage =news2.length<20?4:20
         let totalItem=news2.length
         const numberOfPages = Math.floor(news2.length / itemsPerPage)
       
@@ -73,7 +73,8 @@ const mainCtrl={
         res.render('detail',{
             post,gh,ds,gho
         })
-    }
+    },
+    
    
 }
 module.exports=mainCtrl

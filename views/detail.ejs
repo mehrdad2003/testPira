@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/style-prefix.css">
-    
+        <link rel="icon" 
+        type="image/jpg" 
+        href="/images/logo/pira-logo.jpg">
         <!-- 
           - google font link
         -->
@@ -18,7 +20,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
-        <title>Shop</title>
+        <title>Pira Gallery</title>
     </head>
 <body>
     <%- include('./partials/modal') %> 
@@ -50,7 +52,7 @@
                               <p class="showcase-desc">
                                <%=post.post%>
                               </p>
-                              <a href="https://instagram.com/pira_gallery" target="_blank" rel="noopener noreferrer">
+                              <a href="<%=post.inUrl%>" target="_blank" rel="noopener noreferrer">
                               <button class="add-cart-btn">خرید</button>
                             </a>
                             

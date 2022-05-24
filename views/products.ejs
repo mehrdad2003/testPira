@@ -5,7 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/style-prefix.css">
-    
+        <link rel="icon" 
+        type="image/jpg" 
+        href="/images/logo/pira-logo.jpg">
         <!-- 
           - google font link
         -->
@@ -18,7 +20,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
-        <title>Shop</title>
+        <title>Pira Gallery</title>
     </head>
 <body>
     <%- include('./partials/modal') %> 
@@ -33,9 +35,11 @@
                     <div class="product-main">
 
                         <h2 class="title"><%=name%></h2>
-            
+                        <% if(articles1[page]!==undefined){%>
                         <div class="product-grid">
-                           
+             
+
+                         
             <% articles1[page].forEach((item)=>{%>
                 <div class="showcase">
             
@@ -54,7 +58,7 @@
                         </button>
                         </a>
                        
-                        <a href="https://instagram.com/pira_gallery" target="_blank" rel="noopener noreferrer">
+                        <a href="<%=item.inUrl%>" target="_blank" rel="noopener noreferrer">
                         <button class="btn-action">
                           <ion-icon name="bag-add-outline"></ion-icon>
                         </button>
@@ -76,16 +80,20 @@
     
                   </div>    
             <%})%>
-            
-                        </div>
-                        <div className='btn-container'>
+            <div className='btn-container'>
                    
                 
 
-                            <a class='page-btn' href="/mainSearch?search=<%=name%>&page=<%= page<=0?0:page-1 %>">قبلی</a>
-                            <a class='page-btn' href=""><%=page+1%>از<%=items.length%></a>
-                            <a class='page-btn' href="/mainSearch?search=<%=name%>&page=<%= page+1 >=items.length?0:page+1 %>">بعدی</a>
-                              </div>
+              <a class='page-btn' href="/mainSearch?search=<%=name%>&page=<%= page<=0?0:page-1 %>">قبلی</a>
+              <a class='page-btn' href=""><%=page+1%>از<%=items.length%></a>
+              <a class='page-btn' href="/mainSearch?search=<%=name%>&page=<%= page+1 >=items.length?0:page+1 %>">بعدی</a>
+                </div>
+                        </div>
+                      
+                      
+                              <%}else{%>
+                                <h1>کالایی پیدا نشد</h1>
+                                <%}%>
                       </div>
                 </div>
             </div>

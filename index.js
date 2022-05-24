@@ -13,6 +13,9 @@ app.use('/',require('./routes/main'))
 app.get("/", (req, res) => {
     res.redirect("/index/");
     });
+ app.get("*", (req, res) => {
+      res.redirect("/index/");
+      });
 const PORT= process.env.PORT||7000
 app.listen(PORT,()=>{
   

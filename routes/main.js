@@ -4,4 +4,5 @@ router.get('/',mainCtrl.getPosts)
 router.get('/mainSearch',mainCtrl.mainSearch)
 router.get('/detailPost/:id',mainCtrl.detailPost)
 
+
 module.exports=router
